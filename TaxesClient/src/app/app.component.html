@@ -1,0 +1,11 @@
+<h3>Excel Uploader</h3>
+<div>
+    <input type="file" (change)="onFileChange($event)">
+    <button (click)="uploadFile()">Upload and Process</button>
+</div>
+
+<ng-container *ngIf="message">
+    <div class="alert" [ngClass]="'alert-' + message.type">
+        {{ message.text }}
+    </div>
+</ng-container>
